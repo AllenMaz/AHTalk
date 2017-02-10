@@ -1,0 +1,11 @@
+﻿<Window x:Class="networktest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="C#网络编程" Height="500" Width="800">
+    <Grid>
+        <Button x:Name="processButton" Content="进程" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="101" Height="39" FontSize="18" UseLayoutRounding="False" Background="#FF36B93C" Click="processButton_Click"/>
+        <Button x:Name="threadButton" Content="线程" HorizontalAlignment="Left" Margin="124.881,10,0,0" VerticalAlignment="Top" Width="101" Height="39" FontSize="18" UseLayoutRounding="False" Background="#FF72B936" Click="threadButton_Click"/>
+        <Button x:Name="ipButton" Content="IP" HorizontalAlignment="Left" Margin="241.881,10,0,0" VerticalAlignment="Top" Width="101" Height="39" FontSize="18" UseLayoutRounding="False" Background="#FFB98936" Click="ipButton_Click"/>
+        <Button x:Name="nicButton" Content="网络适配器" HorizontalAlignment="Left" Margin="357.881,10,0,0" VerticalAlignment="Top" Width="101" Height="39" FontSize="18" UseLayoutRounding="False" Background="#FFB99B36" Click="nicButton_Click"/>
+    </Grid>
+</Window>

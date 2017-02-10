@@ -1,0 +1,15 @@
+﻿<Window x:Class="TcpTalk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AHTalk" Height="600" Width="300" MaxWidth="300" Loaded="LoadMainWindow">
+    <Grid>
+        <Label Content="好友列表" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Height="29" Width="102" FontSize="14" FontWeight="Bold"/>
+        <ListBox x:Name="friendListBox" HorizontalAlignment="Left" Height="443" Margin="0,126,0,0" VerticalAlignment="Top" Width="292">
+
+        </ListBox>
+        <StackPanel Orientation="Horizontal" Height="97" VerticalAlignment="Top" Width="292">
+            <Image Height="64"  Source="images/user.jpg" Width="75"/>
+            <Label Content="Allen" FontSize="16" FontWeight="Bold" Foreground="#FF2ECDC6" Margin="0,16,0,17"/>
+        </StackPanel>
+    </Grid>
+</Window>

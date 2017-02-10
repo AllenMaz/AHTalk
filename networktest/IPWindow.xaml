@@ -1,0 +1,17 @@
+﻿<Window x:Class="networktest.IPWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IP" Height="450" Width="700">
+    <Grid>
+        <ScrollViewer x:Name="ipScrollViewerLocal" HorizontalAlignment="Left" Height="335" Margin="22,20,0,0" VerticalAlignment="Top" Width="309">
+            <TextBlock x:Name="ipTextBlockLocal" TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="ipScrollViewerServer" HorizontalAlignment="Left" Height="335" Margin="349,20,0,0" VerticalAlignment="Top" Width="303">
+            <TextBlock x:Name="ipTextBlockServer" TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <Button x:Name="ipButtonLocal" Content="显示本机IP信息" HorizontalAlignment="Left" Margin="63,371,0,0" VerticalAlignment="Top" Width="180" Height="38" Click="ipButtonLocal_Click"/>
+        <Button x:Name="ipButtonServer" Content="显示服务器信息" HorizontalAlignment="Left" Margin="519,371,0,0" VerticalAlignment="Top" Width="133" Height="38" Click="ipButtonServer_Click"/>
+        <TextBox x:Name="ipTextBoxServer" HorizontalAlignment="Left" Height="38" Margin="335,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" ToolTip="服务器" Text="www.xiamenip.cn"/>
+
+    </Grid>
+</Window>
