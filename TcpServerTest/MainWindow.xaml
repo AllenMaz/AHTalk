@@ -7,13 +7,16 @@
         <Label Content="监听状态" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.067,0.074" Width="146" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="startListenButton" Content="启动监听" HorizontalAlignment="Left" Margin="121,405,0,0" VerticalAlignment="Top" Width="168" Height="42" FontSize="20" FontWeight="Bold" Background="#FF3AE41F" Click="startListenButton_Click"/>
         <Button x:Name="stopListenButton" Content="停止监听" HorizontalAlignment="Left" Margin="453,405,0,0" VerticalAlignment="Top" Width="171" Height="42" FontSize="20" FontWeight="Bold" Background="#FFE6DD1C" Click="stopListenButton_Click"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="348" Margin="10,45,0,0" VerticalAlignment="Top" Width="772">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="348" Margin="10,45,0,0" VerticalAlignment="Top" Width="472">
             <ScrollViewer>
                 <TextBlock x:Name="serverTextBlock" TextWrapping="Wrap"/>
             </ScrollViewer>
         </Border>
-        <Label Content="当前用户数" HorizontalAlignment="Left" Margin="526,10,0,0" VerticalAlignment="Top" Height="30" Width="98" FontSize="16" FontWeight="Bold"/>
-        <Label x:Name="totalUserLable" Content="0" HorizontalAlignment="Left" Margin="629,10,0,0" VerticalAlignment="Top" Width="153" FontSize="16" Height="35"/>
+        <Label Content="当前用户数" HorizontalAlignment="Left" Margin="121,10,0,0" VerticalAlignment="Top" Height="30" Width="98" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="totalUserLable" Content="0" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="79" FontSize="16" Height="35"/>
+        <TextBox x:Name="userTextBox" HorizontalAlignment="Left" Height="33" Margin="487,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="addUserButton" Content="添加用户" HorizontalAlignment="Left" Margin="636,12,0,0" VerticalAlignment="Top" Width="111" Height="33" FontSize="18" FontWeight="Bold" Click="addUserButton_Click"/>
+        <ListBox x:Name="userListBox" HorizontalAlignment="Left" Height="345" Margin="487,48,0,0" VerticalAlignment="Top" Width="295"/>
 
     </Grid>
 </Window>

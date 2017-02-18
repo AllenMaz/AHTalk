@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace AHTalk.BLL
     /// </summary>
     public class TcpHandler
     {
-        private const string _serverHostName = "server.natappfree.cc";
-        private const int _serverPort = 33201;
+        public static string _serverHostName = "server.natappfree.cc";
+        public static int _serverPort = 33201;
         //private const string _serverHostName = "localhost";
         //private const int _serverPort = 8090;
 
@@ -31,6 +32,7 @@ namespace AHTalk.BLL
             
         }
 
+        
         /// <summary>
         /// 定义公有方法提供一个全局访问点,同时你也可以定义公有属性来提供全局访问点
         /// </summary>
@@ -52,7 +54,17 @@ namespace AHTalk.BLL
                         try
                         {
                             //创建TCP连接
-                            var tcpClient = new TcpClient(_serverHostName, _serverPort);
+                            TcpClient tcpClient;
+                            try
+                            {
+                                tcpClient = new TcpClient(_serverHostName, _serverPort);
+                            }
+                            catch
+                            {
+                                IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(_serverHostName),_serverPort);
+                                tcpClient = new TcpClient(endpoint);
+                            }
+
                             var bw = new BinaryWriter(tcpClient.GetStream());
                             var br = new BinaryReader(tcpClient.GetStream());
 

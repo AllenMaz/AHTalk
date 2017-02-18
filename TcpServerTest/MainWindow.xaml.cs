@@ -38,6 +38,8 @@ namespace TcpServerTest
             InitializeComponent();
             stopListenButton.IsEnabled = false;
             _serverIPAddress = IPAddress.Parse("127.0.0.1");
+
+            UpdateUserListShow();
         }
 
 
@@ -328,6 +330,38 @@ namespace TcpServerTest
             AddMessageToLabelEventHandler dm = SetTotalUserCountToLable;
             totalUserLable.Dispatcher.Invoke(dm, num);
 
+        }
+
+        private void addUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            var user = userTextBox.Text;
+            if(!string.IsNullOrEmpty(user)){
+                if(UserList.Users.Contains(user)){
+                    MessageBox.Show("用户："+user+"已存在");
+                }
+                else
+                {
+                    userTextBox.Text = string.Empty;
+                    UserList.Users.Add(user);
+                    UpdateUserListShow();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("用户名不能为空");
+            }
+        }
+
+        private void UpdateUserListShow()
+        {
+            userListBox.Dispatcher.Invoke((Action)(() => {
+                userListBox.Items.Clear();
+
+                foreach(var u in UserList.Users){
+                    userListBox.Items.Add(u);
+                }
+            }));
         }
     }
 

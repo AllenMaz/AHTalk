@@ -4,9 +4,11 @@
         Title="AHTalk-登录" Height="300" Width="300" Background="#FF1AC1C1" WindowStartupLocation="CenterScreen">
     <Grid>
         <Image HorizontalAlignment="Left" Height="96" Margin="93,25,0,0" VerticalAlignment="Top" Width="130" Source="images/user.jpg"/>
-        <Label Content="用户名" HorizontalAlignment="Left" Margin="54,151,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFEAF5F5" FontSize="14"/>
-        <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="25" Margin="114,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="MouseKeyUp"/>
-        <Button x:Name="loginButton" Content="登录" HorizontalAlignment="Left" Margin="114,203,0,0" VerticalAlignment="Top" Width="90" Height="33" FontSize="16" FontWeight="Bold" Background="#FFF7F2F2" Foreground="#FF257CAE" Click="loginButton_Click"/>
+        <Label Content="用户名" HorizontalAlignment="Left" Margin="26,172,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFEAF5F5" FontSize="14"/>
+        <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="25" Margin="86,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" KeyUp="MouseKeyUp"/>
+        <Button x:Name="loginButton" Content="登录" HorizontalAlignment="Left" Margin="124,213,0,0" VerticalAlignment="Top" Width="90" Height="33" FontSize="16" FontWeight="Bold" Background="#FFF7F2F2" Foreground="#FF257CAE" Click="loginButton_Click" RenderTransformOrigin="0.778,0.485"/>
+        <Label Content="服务器" HorizontalAlignment="Left" Margin="26,139,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFEAF5F5" FontSize="14"/>
+        <TextBox x:Name="serverIPTextBox" HorizontalAlignment="Left" Height="25" Margin="86,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
 
     </Grid>
 </Window>

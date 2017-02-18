@@ -37,6 +37,22 @@ namespace AHTalk
         /// <param name="e"></param>
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+            //获取服务器IP
+            var serverIP = serverIPTextBox.Text;
+            if(string.IsNullOrEmpty(serverIP)){
+                MessageBox.Show("请填写正确的服务器地址");
+                return;
+            }
+            try
+            {
+                var serverIPs = serverIP.Split(':');
+                TcpHandler._serverHostName = serverIPs[0]; ToString();
+                TcpHandler._serverPort = System.Convert.ToInt32(serverIPs[1]);
+            }catch(Exception ex){
+                MessageBox.Show("服务器地址格式不正确");
+                return;
+            }
+
             var userName = userNameTextBox.Text;
             if(string.IsNullOrEmpty(userName))
             {
